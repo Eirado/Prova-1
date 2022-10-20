@@ -94,6 +94,8 @@ if(ano > 1900 || ano < 2022 ){
 */
 
 
+
+
 int questaoDois(){
     int nome[40],ano;
 printf("verificar se seu ano de nascimento e um ano bissexto ou nao\n");
@@ -212,9 +214,14 @@ case 'C':
 }
 
 int main(){
+
+printf("Algoritmos e Programacao\nProfessor: Joyce Siqueira\nNome: Gabriel Eirado Amaral\nMatricula: 22200242\nCurso: CC\nLink para o GitHub: https://github.com/Eiradoz\nSoftware utilizado: VSCode\n\n\n\n");
+
+
 int questaoDois();
 int questaoTres();
 int questaoUM();
+
 int menu();
 
 menu();
