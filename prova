@@ -106,7 +106,7 @@ scanf("%i", &ano);
 if(ano > 1900 || ano < 2022 ){
     if( ano % 4 == 0 || ano % 100 != 0){
         if(ano % 4 == 0 || ano % 100 == 0 || ano % 400 == 0){
-            printf("\nNome = %s\nano = %i %s, %i eh um ano bissexto\n", nome, ano, nome, ano);
+            printf("\nNome = %s\nano =32 %i %s, %i eh um ano bissexto\n", nome, ano, nome, ano);
             
         }else
             printf("\nNome = %s\nano = %i %s, %i nao eh um ano bissexto\n", nome, ano, nome, ano);
@@ -116,8 +116,60 @@ if(ano > 1900 || ano < 2022 ){
 }
 
 int questaoTres(){
+    int mesInicio, mesFim, resultadoMes;
+    char nomeObra[40], i;
+    printf("Situacao da obra: \n");
+    printf("\n1 Obra Concluida\n2 Problemas no projeto\n3 Atraso nos repasses financeiros\n4 Greve dos trabalhadores\n5 Falta de materiais\n6 Falta de equipamentos");
 
+printf("\nDigite o nome da obra, o mes de inicio, o mes de termino : \n");
+setbuf(stdin, NULL);
+gets(nomeObra);
+scanf("%i%i", &mesInicio, &mesFim);
+printf("\nDigite a situacao da obra\n:");
+setbuf(stdin, NULL);
+scanf("%c", &i);
+printf("%c", i);
+resultadoMes = mesFim - mesInicio;
+
+switch (i){
+case '1':
+    printf("\n%s\n",nomeObra);
+    printf("em %i mes\n", resultadoMes);
+    printf("Obra Concluida\n");
+    break;
+case '2':
+    printf("\nProblemas no projeto\n");
+    printf("%s\n",nomeObra);
+    printf("em %i mes\n", resultadoMes);
+    break;
+case '3':
+    printf("\nAtraso nos repasses financeiros\n");
+    printf("%s\n",nomeObra);
+    printf("em %i mes\n", resultadoMes);
+    break;
+case '4':
+    printf("\nGreve dos trabalhadores\n");
+    printf("%s\n",nomeObra);
+    printf("em %i mes\n", resultadoMes);
+    break;
+case '5':
+    printf("\nFalta de materiais\n");
+    printf("%s\n",nomeObra);
+    printf("em %i mes\n", resultadoMes);
+    break;
+case '6':
+    printf("\nFalta de equipamentos\n");
+    printf("%s\n",nomeObra);
+    printf("em %i mes\n", resultadoMes);
+    break;
+
+
+default: 
+    printf("\nvalor invalido\n");
+    break;
 }
+}
+
 
 int questaoUm(){
 
@@ -152,12 +204,12 @@ case 'A':
 case 'B':
         questaoDois();
     break;
+case 'C':
+        questaoTres();
+
 }}while( i =! '0');       
 
-
-
 }
-
 
 int main(){
 
