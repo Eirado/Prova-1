@@ -212,8 +212,11 @@ case 'C':
 }
 
 int main(){
-
+int questaoDois();
+int questaoTres();
+int questaoUM();
 int menu();
+
 menu();
 
 }
